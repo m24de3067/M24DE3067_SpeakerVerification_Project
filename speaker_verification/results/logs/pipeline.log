@@ -1,0 +1,79 @@
+[2026-04-12 07:10:21] INFO  pipeline: Project : Inclusive Speaker Verification and Fairness Analysis
+[2026-04-12 07:10:21] INFO  pipeline: Team    : Sachin Patil, Venkatesh Doddi, Akash Badola, Ashish Gajbhiye
+[2026-04-12 07:10:21] INFO  pipeline: Device  : cpu
+[2026-04-12 07:10:21] INFO  pipeline: Phase   : demo
+[2026-04-12 07:10:21] INFO  pipeline: Running full pipeline...
+[2026-04-12 07:10:21] INFO  pipeline: ============================================================
+[2026-04-12 07:10:21] INFO  pipeline: PHASE 2 — Feature Extraction & Training
+[2026-04-12 07:10:21] INFO  pipeline: ============================================================
+[2026-04-12 07:10:21] INFO  pipeline: Training set: 1000 utterances, 50 speakers
+[2026-04-12 07:10:21] INFO  pipeline: Model parameters: 4,644,294
+[2026-04-12 07:10:36] INFO  pipeline: Project : Inclusive Speaker Verification and Fairness Analysis
+[2026-04-12 07:10:36] INFO  pipeline: Team    : Sachin Patil, Venkatesh Doddi, Akash Badola, Ashish Gajbhiye
+[2026-04-12 07:10:36] INFO  pipeline: Device  : cpu
+[2026-04-12 07:10:36] INFO  pipeline: Phase   : fairness
+[2026-04-12 07:10:36] INFO  pipeline: ============================================================
+[2026-04-12 07:10:36] INFO  pipeline: PHASE 4 — Fairness Evaluation & Mitigation
+[2026-04-12 07:10:36] INFO  pipeline: ============================================================
+[2026-04-12 07:10:53] INFO  pipeline: Project : Inclusive Speaker Verification and Fairness Analysis
+[2026-04-12 07:10:53] INFO  pipeline: Team    : Sachin Patil, Venkatesh Doddi, Akash Badola, Ashish Gajbhiye
+[2026-04-12 07:10:53] INFO  pipeline: Device  : cpu
+[2026-04-12 07:10:53] INFO  pipeline: Phase   : fairness
+[2026-04-12 07:10:53] INFO  pipeline: ============================================================
+[2026-04-12 07:10:53] INFO  pipeline: PHASE 4 — Fairness Evaluation & Mitigation
+[2026-04-12 07:10:53] INFO  pipeline: ============================================================
+[2026-04-12 07:10:57] INFO  pipeline: Computing per-group metrics (before mitigation)...
+[2026-04-12 07:10:58] INFO  pipeline: Applying threshold calibration (equalized FPR)...
+[2026-04-12 07:10:58] INFO  pipeline:   Calibrated thresholds: {'male': 0.07568661868572235, 'female': 0.07831745594739914}
+[2026-04-12 07:10:58] INFO  pipeline: Phase 4 complete.
+[2026-04-12 07:10:58] INFO  pipeline: 
+All phases complete in 5.5s
+[2026-04-12 07:10:58] INFO  pipeline: Results saved to: results/
+[2026-04-12 07:11:09] INFO  pipeline: Project : Inclusive Speaker Verification and Fairness Analysis
+[2026-04-12 07:11:09] INFO  pipeline: Team    : Sachin Patil, Venkatesh Doddi, Akash Badola, Ashish Gajbhiye
+[2026-04-12 07:11:09] INFO  pipeline: Device  : cpu
+[2026-04-12 07:11:09] INFO  pipeline: Phase   : explain
+[2026-04-12 07:11:09] INFO  pipeline: ============================================================
+[2026-04-12 07:11:09] INFO  pipeline: PHASE 5 — Explainability & Frequency Attribution
+[2026-04-12 07:11:09] INFO  pipeline: ============================================================
+[2026-04-12 07:11:09] INFO  pipeline: Generating saliency maps for 5 sample utterances...
+[2026-04-12 07:11:18] INFO  pipeline:   Sample 1/5 done
+[2026-04-12 07:11:27] INFO  pipeline:   Sample 2/5 done
+[2026-04-12 07:11:36] INFO  pipeline:   Sample 3/5 done
+[2026-04-12 07:11:46] INFO  pipeline:   Sample 4/5 done
+[2026-04-12 07:11:55] INFO  pipeline:   Sample 5/5 done
+[2026-04-12 07:11:56] INFO  pipeline: Phase 5 complete.
+[2026-04-12 07:11:56] INFO  pipeline: 
+All phases complete in 47.0s
+[2026-04-12 07:11:56] INFO  pipeline: Results saved to: results/
+[2026-04-16 01:33:31] INFO  pipeline: Project : Inclusive Speaker Verification and Fairness Analysis
+[2026-04-16 01:33:31] INFO  pipeline: Team    : Sachin Patil, Venkatesh Doddi, Akash Badola, Ashish Gajbhiye
+[2026-04-16 01:33:31] INFO  pipeline: Device  : cpu
+[2026-04-16 01:33:31] INFO  pipeline: Phase   : train
+[2026-04-16 01:33:31] INFO  pipeline: ============================================================
+[2026-04-16 01:33:31] INFO  pipeline: PHASE 2 � Feature Extraction & Training
+[2026-04-16 01:33:31] INFO  pipeline: ============================================================
+[2026-04-16 01:33:31] INFO  pipeline: Training set: 1000 utterances, 50 speakers
+[2026-04-16 01:33:31] INFO  pipeline: Model parameters: 4,644,294
+[2026-04-16 01:34:09] INFO  pipeline: Epoch [001/30]  Loss: 4.0623  Acc: 1.88%  LR: 9.97e-04
+[2026-04-16 01:34:49] INFO  pipeline: Epoch [002/30]  Loss: 4.0164  Acc: 1.56%  LR: 9.89e-04
+[2026-04-16 01:35:46] INFO  pipeline: Epoch [003/30]  Loss: 3.9940  Acc: 2.19%  LR: 9.76e-04
+[2026-04-16 01:36:51] INFO  pipeline: Epoch [004/30]  Loss: 3.9700  Acc: 1.56%  LR: 9.57e-04
+[2026-04-16 01:39:08] INFO  pipeline: Epoch [005/30]  Loss: 3.9534  Acc: 2.08%  LR: 9.33e-04
+[2026-04-16 01:42:35] INFO  pipeline: Epoch [006/30]  Loss: 3.9499  Acc: 1.88%  LR: 9.05e-04
+[2026-04-16 01:45:29] INFO  pipeline: Epoch [007/30]  Loss: 3.9523  Acc: 1.77%  LR: 8.72e-04
+[2026-04-16 01:46:14] INFO  pipeline: Epoch [008/30]  Loss: 3.9350  Acc: 2.40%  LR: 8.35e-04
+[2026-04-16 01:47:00] INFO  pipeline: Epoch [009/30]  Loss: 3.9558  Acc: 2.40%  LR: 7.94e-04
+[2026-04-16 01:47:44] INFO  pipeline: Epoch [010/30]  Loss: 3.9499  Acc: 2.19%  LR: 7.50e-04
+[2026-04-16 01:48:31] INFO  pipeline: Epoch [011/30]  Loss: 3.9462  Acc: 1.56%  LR: 7.03e-04
+[2026-04-16 01:49:16] INFO  pipeline: Epoch [012/30]  Loss: 3.9510  Acc: 1.98%  LR: 6.55e-04
+[2026-04-16 01:50:02] INFO  pipeline: Epoch [013/30]  Loss: 3.9494  Acc: 1.35%  LR: 6.04e-04
+[2026-04-16 01:50:52] INFO  pipeline: Epoch [014/30]  Loss: 3.9418  Acc: 1.35%  LR: 5.52e-04
+[2026-04-16 01:51:49] INFO  pipeline: Epoch [015/30]  Loss: 3.9399  Acc: 1.46%  LR: 5.00e-04
+[2026-04-16 01:54:30] INFO  pipeline: Epoch [016/30]  Loss: 3.9313  Acc: 2.40%  LR: 4.48e-04
+[2026-04-16 01:59:44] INFO  pipeline: Epoch [017/30]  Loss: 3.9322  Acc: 1.46%  LR: 3.96e-04
+[2026-04-16 02:02:35] INFO  pipeline: Epoch [018/30]  Loss: 3.9395  Acc: 1.56%  LR: 3.45e-04
+[2026-04-16 02:05:24] INFO  pipeline: Epoch [019/30]  Loss: 3.9282  Acc: 2.08%  LR: 2.97e-04
+[2026-04-16 02:08:02] INFO  pipeline: Epoch [020/30]  Loss: 3.9290  Acc: 1.77%  LR: 2.50e-04
+[2026-04-16 02:12:48] INFO  pipeline: Epoch [021/30]  Loss: 3.9345  Acc: 1.56%  LR: 2.06e-04
+[2026-04-16 02:17:48] INFO  pipeline: Epoch [022/30]  Loss: 3.9274  Acc: 2.19%  LR: 1.65e-04

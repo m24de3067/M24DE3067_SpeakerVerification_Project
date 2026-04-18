@@ -1,0 +1,93 @@
+# ─────────────────────────────────────────────────────────────────
+# Inclusive Speaker Verification – Main Configuration
+# ─────────────────────────────────────────────────────────────────
+
+project:
+  name: "Inclusive Speaker Verification and Fairness Analysis"
+  team: "Sachin Patil, Venkatesh Doddi, Akash Badola, Ashish Gajbhiye"
+  version: "1.0.0"
+
+# ── Paths ──────────────────────────────────────────────────────────
+paths:
+  data_root:        "data/"
+  voxceleb1:        "data/voxceleb1/"
+  voxceleb2:        "data/voxceleb2/"
+  musan:            "data/musan/"
+  rir:              "data/rir_noises/"
+  results:          "results/"
+  checkpoints:      "results/checkpoints/"
+  logs:             "results/logs/"
+  plots:            "results/plots/"
+  embeddings:       "results/embeddings/"
+
+# ── Audio ──────────────────────────────────────────────────────────
+audio:
+  sample_rate:      16000
+  min_duration_sec: 2.0
+  max_duration_sec: 10.0
+
+# ── Features ───────────────────────────────────────────────────────
+features:
+  type:             "fbank"       # fbank | mfcc
+  n_mels:           80
+  n_mfcc:           40
+  win_length:       400           # 25ms @ 16kHz
+  hop_length:       160           # 10ms @ 16kHz
+  f_min:            20
+  f_max:            7600
+  normalize:        true
+
+# ── X-Vector Model ─────────────────────────────────────────────────
+model:
+  embedding_dim:    512
+  num_speakers:     1211          # VoxCeleb1 dev set
+  dropout:          0.5
+  tdnn_channels:    [512, 512, 512, 512, 1500]
+  tdnn_kernels:     [5, 3, 3, 1, 1]
+  tdnn_dilations:   [1, 2, 3, 1, 1]
+
+# ── Training ────────────────────────────────────────────────────────
+training:
+  epochs:           30
+  batch_size:       64
+  learning_rate:    1.0e-3
+  weight_decay:     1.0e-4
+  lr_scheduler:     "cosine"
+  warmup_epochs:    3
+  grad_clip:        5.0
+  num_workers:      4
+  seed:             42
+
+# ── Augmentation ───────────────────────────────────────────────────
+augmentation:
+  enabled:          true
+  snr_low_db:       5
+  snr_high_db:      20
+  noise_prob:       0.5
+  reverb_prob:      0.3
+  speed_perturb:    [0.9, 1.0, 1.1]
+
+# ── Evaluation ─────────────────────────────────────────────────────
+evaluation:
+  use_pretrained:   true
+  pretrained_source: "speechbrain/spkrec-xvect-voxceleb"
+  n_bootstrap:      1000
+  confidence:       0.95
+  target_fpr:       0.05          # for threshold calibration
+
+# ── Fairness ────────────────────────────────────────────────────────
+fairness:
+  demographic_groups:
+    - "male"
+    - "female"
+    - "native"
+    - "non_native"
+  mitigation:
+    method:         "threshold_calibration"   # threshold_calibration | reweighting
+    target_metric:  "equalized_fpr"
+
+# ── Explainability ─────────────────────────────────────────────────
+explainability:
+  method:           "integrated_gradients"
+  n_steps:          50
+  save_plots:       true

@@ -1,0 +1,7 @@
+group_key,group,value,eer_pct,ci_low,ci_high,threshold,n
+overall,eer_pct,48.7999,,,,,
+overall,min_dcf,0.987903,,,,,
+overall,threshold,-0.003908,,,,,
+overall,n,500.0,,,,,
+male,unknown,,48.7999,44.2035,53.4048,-0.003908,500.0
+female,unknown,,48.7999,44.2035,53.4048,-0.003908,500.0
